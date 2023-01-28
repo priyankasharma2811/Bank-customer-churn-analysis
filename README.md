@@ -1,6 +1,12 @@
 # Bank customer churn analysis
 
 
+Bank customers churn prediction means predicting which customers are likely to leave the bank. As the bank can change their marketing strategies and make efforts to retain those cutomers.
+
+Challenges :
+1.	The dataset was not balanced as there are more customers who stayed then who left. So, balancing techniques used to balance it.
+2.	Understanding the relationship between the target variable and feature variables.
+3.	Choosing the best model with good recall.
 
 
 Encoding Categorical data
@@ -21,10 +27,16 @@ The median and the interquartile range are then stored so that it could be used 
 RobustScaler uses the interquartile range so that it is robust to outliers.
 
 
+Models:
 
-SVM: 
-Larger margin
-Lower misclassification and error rate.
+SVM  (Support Vector Machine): 
+  Objective
+  1. Larger margin
+  2. Lower misclassification and error rate.
 Hyperparameters
 1.	Gamma (Not in linear) : Low value indicates large similarity radius which results into more points grouped together. High values, the points should be very close to each other to be in same group.
 2.	C is hyper or regularization parameter of svm which controls the error the strength of regularization is inversely proportion If c is small the penalty for misclassified point is low and decision boundary with large margin is chosen. If c is large then margin will be small as svm tries to minimize the number of  misclassified data points.
+
+
+XGBoost (Extreme Gradient Boosting):
+It works with Distributed Gradient Boosted Decision trees. It is built on : supervised machine learning, decision trees, ensemble learning and gradient boosting. It consists of multiple decision tree created in sequential form . Similarly as Random forest but the difference is how tress are combined. In this weights are assigned to all the independent variables which are fed to decision tree which predicts results.
